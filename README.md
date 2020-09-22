@@ -29,8 +29,7 @@ For example: `ddt --quiet`
 
 ## Example Usage
 
-The example below only requires `go` be installed in order to generate the `go.list` file. 
-You could instead have some other part of the CI build generate that file for use by `nancy`.
+The example below shows the use of a piped package list.
 ```
 name: Jake Github Action
 
@@ -45,6 +44,8 @@ jobs:
 
     - name: Run Jake
       uses: sonatype-nexus-community/jake-github-action@master
+      with:
+        condaPipe: true
 ```
 
 ## Development
