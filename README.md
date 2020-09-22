@@ -12,6 +12,13 @@ Run [Sonatype Jake](https://github.com/sonatype-nexus-community/jake) as part of
 
 ## Inputs
 
+### `condaPipe`
+
+**Default** : `false` 
+
+Optional command to indicate if stdIn will be passed the package list stream from conda.
+If set to `true`, the `-c` argument will automatically be passed to `jake` and a package list must be piped to stdIn. 
+
 ### `jakeCommand`
 
 **Default** : `ddt` 
