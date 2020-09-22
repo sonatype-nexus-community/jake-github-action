@@ -18,7 +18,7 @@
 
 if [ $condaPipe ]; then
   echo "processing conda package list..."
-  jake $2 < $1 -c
+  jake $2 -c < $1
 else
   jake $1
 fi
