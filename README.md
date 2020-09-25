@@ -28,7 +28,7 @@ For example: `ddt --quiet`
 
 ## Example Usage
 
-The example below shows the use of a piped package list.
+The example below shows the use of a custom package list file.
 ```
 name: Jake Github Action
 
