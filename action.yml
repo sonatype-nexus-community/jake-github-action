@@ -2,10 +2,10 @@ name: 'Jake for GitHub Actions'
 author: 'Sonatype'
 description: 'Run Sonatype Jake as part of your GitHub Actions workflow.'
 inputs:
-  condaPipe:
-    description: 'Optional command to indicate if stdIn will be passed the package list stream from conda. Defaults to "false"'
+  packagesListFile:
+    description: 'The path to a file containing the list of packages, typically the output from a "conda list" command.'
     required: false
-    default: 'false'
+    default: packages.list
   jakeCommand:
     description: 'Optional jake command. Defaults to "ddt"'
     required: false
@@ -14,7 +14,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.condaPipe }}
+    - ${{ inputs.packagesListFile }}
     - ${{ inputs.jakeCommand }}
 branding:
   icon: 'shield'

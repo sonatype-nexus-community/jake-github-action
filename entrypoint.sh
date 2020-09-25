@@ -14,11 +14,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#echo "condaPipe: $condaPipe"
-
-if [ $condaPipe ]; then
-  echo "processing conda package list..."
-  jake $2 -c < $1
-else
-  jake $1
-fi
+jake $2 -c < $1
