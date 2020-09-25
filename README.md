@@ -12,12 +12,11 @@ Run [Sonatype Jake](https://github.com/sonatype-nexus-community/jake) as part of
 
 ## Inputs
 
-### `condaPipe`
+### `packagesListFile`
 
-**Default** : `false` 
+**Default** : `packages.list` 
 
-Optional command to indicate if stdIn will be passed the package list stream from conda.
-If set to `true`, the `-c` argument will automatically be passed to `jake` and a package list must be piped to stdIn. 
+Optional command providing the path to a file containing the list of packages, typically the output from a "conda list" command.
 
 ### `jakeCommand`
 
@@ -45,7 +44,7 @@ jobs:
     - name: Run Jake
       uses: sonatype-nexus-community/jake-github-action@master
       with:
-        condaPipe: true
+        packagesListFile: myPackages.list
 ```
 
 ## Development
