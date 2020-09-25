@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/sonatype-nexus-community/jake/blob/master/docs/images/jake.png" width="350"/>
+    <img src="https://github.com/sonatype-nexus-community/jake/blob/main/docs/images/jake.png" width="350"/>
 </p>
 
 <p align="center">
@@ -42,7 +42,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Run Jake
-      uses: sonatype-nexus-community/jake-github-action@master
+      uses: sonatype-nexus-community/jake-github-action@main
       with:
         packagesListFile: myPackages.list
 ```
@@ -60,9 +60,9 @@ name: Jake
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
 
