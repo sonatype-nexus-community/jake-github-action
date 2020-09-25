@@ -16,7 +16,7 @@ Run [Sonatype Jake](https://github.com/sonatype-nexus-community/jake) as part of
 
 **Default** : `packages.list` 
 
-Optional command providing the path to a file containing the list of packages, typically the output from a "conda list" command.
+Optional command providing the path to a file containing the list of packages, typically the output from a `conda list` command.
 
 ### `jakeCommand`
 
