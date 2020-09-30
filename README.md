@@ -80,17 +80,6 @@ jobs:
         jakeCommand: ddt --quiet
 ```
  
-  * Gotchya - As of go v1.15, there is an issue using `act` related to how docker handles http `identity`
-  connections. Due to this issue, I had to run `act` in a Linux Virtual Machine when running go 1.15. The error 
-  you see running `act` resulting from this issue looks similar to this:
-    ```
-    $ act 
-    [Go/Build] 🚀  Start image=node:12.6-buster-slim
-    [Go/Build]   🐳  docker run image=node:12.6-buster-slim entrypoint=["/usr/bin/tail" "-f" "/dev/null"] cmd=[]
-    [Go/Build]   🐳  docker cp src=/Users/bhamail/sonatype/community/go/gh-action-test/. dst=/github/workspace
-    Error: error during connect: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.40/exec/9f2eb3f2ea59b7e41c32efe56a90c2919fe4b459b3f1e763dd02686f797839da/start": net/http: HTTP/1.x transport connection broken: unsupported transfer encoding: "identity"
-    ```
-
 ## The Fine Print
 
 It is worth noting that this is **NOT SUPPORTED** by Sonatype, and is a contribution of ours
